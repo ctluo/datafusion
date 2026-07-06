@@ -22,8 +22,6 @@ A Python research framework implementing and benchmarking four multi-fidelity da
 
 ## Background
 
-![Schematic Diagram of ConvexHull-GP](Schematic.png)
-
 In aerospace engineering, high-fidelity CFD simulations and wind tunnel experiments provide accurate aerodynamic data but are extremely expensive. Low-fidelity methods (e.g., engineering estimation codes) are fast and cheap but less accurate. Multi-fidelity data fusion bridges this gap: use LF data to build a global surrogate, then correct it with sparse HF observations.
 
 This project implements four such fusion strategies and evaluates them systematically on four aerodynamic datasets (LTV missile, AGARD-B, HB2, HSCM3 configurations).
@@ -37,6 +35,8 @@ All four algorithms are implemented in `DataFusionAlgorithms.py` and share the s
 ```python
 y_pred = algorithm(X_LF, Y_LF, X_HF, Y_HF, X_pred)
 ```
+
+![Schematic Diagram of ConvexHull-GP](Schematic.png)
 
 ### 1. MF-IDW — Multi-Fidelity Inverse Distance Weighting
 
